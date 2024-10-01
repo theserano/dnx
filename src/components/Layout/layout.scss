@@ -1,0 +1,25 @@
+
+.layout{
+    display: flex;
+    max-width: 2156px;
+    height: 100vh;
+    position: relative;
+    
+    &__menu{
+        max-width: 16rem;
+        height: inherit;
+        background-color: #fff;
+        position: absolute;
+        z-index: 999;
+    }
+    &__main{
+        flex: 1;
+        overflow-y: scroll;
+        padding-left: 4.4rem;
+        width: 100%;
+
+        @include md{
+            padding-left: 3.2rem;
+        }
+    }
+}

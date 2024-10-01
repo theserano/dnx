@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.date-picker-container {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+.rdpx {
+    --rdpx-primary-color: #4a6cf7;
+    --rdpx-background-color: transparent;
+    --rdpx-outline-color: #4a6cf7;
+    --rdpx-cell-height: 20px;
+    --rdpx-cell-width: 20px;
+}
+
+.rdp-caption_label{
+    font-size: 14px;
+}
+.rdp-day_button{
+    height: 15px !important;
+    border-radius: 0 !important;
+
+    @include sm{
+        width: 30px !important;
+    }
+}
+.rdpx-nav {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rdp-day {
+    color: #999;
+    font-weight: 600;
+}
+
+.rdpx-day--selected {
+    background-color: #1e1e2f;
+    color: #4a6cf7;
+}
+
+.rdp-day--today {
+    color: #4a6cf7;
+}
+
+.rdpx-day--outside {
+    visibility: hidden;
+}
+.rdp-month_caption{
+    justify-content: space-between;
+}
+.rdp-months{
+    max-width: 100% !important;
+}
+
+
+// card styles
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 15px;
+
+    @include lg{
+        max-width: 350px;
+    }
+    @include md{
+        max-width: 300px;
+    }
+
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        &__top{
+            h3{
+                margin: 0;
+                font-size: 16px;
+                font-weight: 600;
+
+                @include lg{
+                    font-size: 14px;
+                }
+                @include md{
+                    font-size: 12px;
+                }
+            }
+            h4{
+                margin: 0;
+                font-size: 12px;
+                font-weight: 300;
+                @include md{
+                    font-size: 10px;
+                }
+            }
+        }
+        &__middle{
+            &__text{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-weight: 500;
+
+                    @include md{
+                        font-size: 12px;
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    color: #546FFF;
+
+                    @include md{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__left{
+                display: flex;
+                align-items: center;
+                gap: .3rem;
+
+                p{
+                    @include md{
+                        font-size: 12px;
+                    }
+                }
+            }
+            img{
+                @include md{
+                    width: 70px;
+                }
+            }
+        }
+    }
+}
+
+.userCard{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 2px 15px -3px rgba(0,0,0,0.1);
+    padding: 2rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include sm{
+        max-width: 350px;
+        padding: 1rem;
+    }
+
+    @include lg{
+        padding: 1rem;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            img{
+                @include md{
+                    width: 30px;
+                }
+            }
+
+            h4{
+                font-size: 16px;
+                font-weight: 600;
+                color: #141522;
+
+                @include md{
+                    font-size: 14px;
+                }
+            }
+            h5{
+                font-size: 12px;
+                color: #54577A;
+
+                @include md{
+                    font-size: 10px;
+                }
+            }
+        }
+
+        &__right{
+            &__follow{
+                font-size: 14px;
+                color: #546FFF;
+                font-weight: 300;
+                @include lg{
+                    font-size: 12px;
+                }
+            }
+            &__followed{
+                font-size: 14px;
+                color: #9C9CA4;
+                @include lg{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &__middle{
+        color: #8E92BC;
+        font-size: 14px;
+
+        @include lg{
+            font-size: 12px;
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left{
+            display: flex;
+            gap: .2rem;
+            align-items: center;
+
+            p{
+                color: #141522;
+                font-size: 14px;
+                font-weight: 600;
+
+                @include lg{
+                    font-size: 12px;
+                }
+                @include sm{
+                    font-size: 10px;
+                }
+            }
+
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__right{
+            display: flex;
+            gap: .3rem;
+
+            img{
+                @include sm{
+                    width: 12px;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                color: #141522;
+                font-weight: 600;
+
+                @include lg{
+                    font-size: 12px;
+                }
+                @include sm{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.slick-track{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+
+    @include lg{
+        gap: 1rem !important;
+    }
+    @include sm{
+        gap: .5rem !important;
+    }
+}
+.slick-next:before{
+    color: #000 !important;
+    font-family: "Roboto", sans-serif !important;
+    content: '›' !important;
+    font-size: 40px !important;
+    line-height: 0.5 !important;
+}
+.slick-prev:before{
+    color: #000 !important;
+    font-family: "Roboto", sans-serif !important;
+    content: '‹' !important;
+    font-size: 40px !important;
+    line-height: 0.5 !important;
+    margin-left: 1rem;
+}
+.slick-slider{
+    margin: 0 1rem;
+}
+
+
+.carousel{
+    margin: 2rem 0rem;
+
+    &__title{
+        font-size: 26px;
+        font-weight: 600; 
+        color: #141522;
+        padding-left: 1rem;
+
+        @include lg{
+            padding-left: 1rem;
+            font-size: 22px;
+        }
+
+        @include sm{
+            font-size: 20px;
+            padding-left: .5rem;
+        }
+    }
+}

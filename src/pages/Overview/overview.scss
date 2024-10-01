@@ -1,0 +1,278 @@
+@import '../../styles/variables';
+
+.overview{
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    @include md{
+        grid-template-columns: 100%;
+    }
+
+    &__main{
+        padding: 1rem;
+
+        @include sm{
+            padding: .5rem;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 1rem;
+
+            @include lg{
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            @include sm{
+                padding: 1rem 0rem;
+            }
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+                gap: .7rem;
+
+                @include sm{
+                    gap: .3rem;
+                    margin-bottom: -1rem;
+                }
+    
+                h1 {
+                    line-height: 0;
+                    margin: 0;
+                    font-size: 24px;
+                    font-weight: 600;
+
+                    @include sm{
+                        font-size: 20px;
+                    }
+                }
+    
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #54577A;
+
+                    @include sm{
+                        font-size: 12px;
+                    }
+                }
+            }
+    
+            &__right {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 2rem;
+
+                @include sm{
+                    gap: 1rem;
+                }
+
+                :first-child{
+                    @include sm{
+                        width: 20px;
+                    }
+                }
+                :last-child{
+                    @include sm{
+                        width: 35px;
+                    }
+                }
+            }
+        }
+
+        &__charts{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem;
+
+            @include lg{
+                flex-direction: column;
+            }
+
+            @include sm{
+                padding: 0rem;
+            }
+
+            &__progress{
+                border-radius: 10px;
+                padding: 1rem 1rem 0;
+                background-color: #141522;
+                height: 200px;
+
+                @include xl{
+                    max-height: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: fit-content;
+                    padding: 1rem !important;
+                }
+
+                &__h4{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    margin: 0 0 1rem;
+                }
+                &__h1{
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin: 0;
+
+                    @include xl{
+                        font-size: 25px;
+                    }
+                }
+
+                &__measure{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+
+                    &__div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+
+                        h1{
+                            font-size: 20px;
+                            margin: 0;
+                            color: #fff;
+                        }
+                        p{
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #54577A;
+                        }
+                    }
+                }
+            }
+
+            &__activity{
+                flex: 1;
+                background-color: #F5F5F7;
+                padding: 1rem;
+                border-radius: 3px;
+                max-width: 1000px;
+
+                @include lg{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__side{
+        background-color: #F5F5F7;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+        height: 100%;
+
+        @include xxl{
+            height: 100%;
+        }
+
+        &__date{
+            width: 100%;
+            overflow-x: hidden;
+
+            @include lg{
+                width: 100%;
+            }
+        }
+
+        &__task{
+            width: 100%;
+            // overflow-x: hidden;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+
+            &__h1{
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            &__card{
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 0rem 1rem;
+
+            &__top{
+                display: flex;
+                justify-content: space-between;
+
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+
+            &__middle{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                &__each{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    div{
+                        background-color: #F5F5F7;
+                        color: #000;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 600;
+
+                        @include sm{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            &__bottom{
+                width: 100%;
+                border-radius: 10px;
+                background-color: #546FFF;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 12px;
+            }
+        }
+    }
+
+
+}
