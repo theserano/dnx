@@ -25,15 +25,15 @@ const Menubar = ({}: Props) => {
       <div onClick={showMenu} className="menubar__icon">
         <CgMenuGridO />
       </div>
-      <div className={`menubar ${active ? 'menu__active' : ''}`}>
+      <div className={`menubar ${active ? "menu__active" : ""}`}>
         <div className="menubar__top">
           <motion.div className="menubar__top__logo">
-            <img src={logo} alt="logo" />
-            <h1 className={`${active ? 'h1__active' : ''}`}>DNX</h1>
+            <img src={logo} alt="logo" loading="lazy" />
+            <h1 className={`${active ? "h1__active" : ""}`}>DNX</h1>
           </motion.div>
           <MenuList active={active} data={menuItems} />
         </div>
-        <div className={`menubar__bottom ${active ? 'help__active' : ''}`}>
+        <div className={`menubar__bottom ${active ? "help__active" : ""}`}>
           <div className="menubar__bottom__top">
             <h4>Help center</h4>
             <p>
@@ -43,7 +43,7 @@ const Menubar = ({}: Props) => {
           <motion.button className="menubar__bottom__btn">
             Go to help center
           </motion.button>
-          <img src={question} alt="stuff" />
+          <img src={question} alt="stuff" loading="lazy" />
         </div>
       </div>
     </div>

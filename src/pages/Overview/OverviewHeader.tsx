@@ -12,12 +12,10 @@ type Props = {
 const OverviewHeader = ({ title }: Props) => {
   return (
     <div className="overview__main__header">
-      <motion.div className="overview__main__header__left">
-        {title}
-      </motion.div>
+      <motion.div className="overview__main__header__left">{title}</motion.div>
       <div className="overview__main__header__right">
-        <img src={notification} alt="notifications" />
-        <img src={profilePicture} alt="profile picture" />
+        <img src={notification} alt="notifications" loading="lazy" />
+        <img src={profilePicture} alt="profile picture" loading="lazy" />
       </div>
     </div>
   );

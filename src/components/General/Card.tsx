@@ -45,8 +45,16 @@ const ProgressCard = ({ image, title, base, progress, time, width, padding, back
   
 
   return (
-    <div className="card" style={{maxWidth: width && width, backgroundColor: background && background, padding: padding && padding, boxShadow: boxShadow && boxShadow}}>
-      <img src={image} alt="image" />
+    <div
+      className="card"
+      style={{
+        maxWidth: width && width,
+        backgroundColor: background && background,
+        padding: padding && padding,
+        boxShadow: boxShadow && boxShadow,
+      }}
+    >
+      <img src={image} alt="image" loading="lazy" />
       <div className="card__bottom">
         <div className="card__bottom__top">
           <h3>{title}</h3>
@@ -79,7 +87,7 @@ const ProgressCard = ({ image, title, base, progress, time, width, padding, back
             <CiClock2 />
             <p>{time}</p>
           </div>
-          <img src={student} alt="images" />
+          <img src={student} alt="images" loading="lazy" />
         </div>
       </div>
     </div>
@@ -92,7 +100,12 @@ export const UserCard = ({ image, title, name, followed, task, review }: UserPro
     <div className="userCard">
       <div className="userCard__top">
         <div className="userCard__top__left">
-          <img src={image} alt="" className="userCard__top__left__img" />
+          <img
+            src={image}
+            alt=""
+            className="userCard__top__left__img"
+            loading="lazy"
+          />
           <div className="userCard__top__left__text">
             <h4>{name}</h4>
             <h5>{title}</h5>
@@ -112,7 +125,7 @@ export const UserCard = ({ image, title, name, followed, task, review }: UserPro
           <p>{task} Tasks</p>
         </div>
         <div className="userCard__bottom__right">
-          <img src={Star} alt="star" />
+          <img src={Star} alt="star" loading="lazy" />
           <p>{review}</p>
         </div>
       </div>
@@ -125,7 +138,12 @@ export const MentorCard = ({ image, title, name, followed, task, review, text }:
     <div className="userCard">
       <div className="userCard__top">
         <div className="userCard__top__left">
-          <img src={image} alt="" className="userCard__top__left__img" />
+          <img
+            src={image}
+            alt=""
+            className="userCard__top__left__img"
+            loading="lazy"
+          />
           <div className="userCard__top__left__text">
             <h4 className="mentor__h1">{name}</h4>
             <h5 className="mentor__h5">{title}</h5>
@@ -146,8 +164,8 @@ export const MentorCard = ({ image, title, name, followed, task, review, text }:
           <p className="mentor__taskP">{task} Tasks</p>
         </div>
         <div className="userCard__bottom__right">
-          <img src={Star} alt="star" />
-          <p className="mentor__taskP" >{review}</p>
+          <img src={Star} alt="star" loading="lazy" />
+          <p className="mentor__taskP">{review}</p>
         </div>
       </div>
     </div>
